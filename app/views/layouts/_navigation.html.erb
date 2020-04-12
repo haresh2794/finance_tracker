@@ -31,6 +31,8 @@
         </li>
       </ul>
       <ul class='navbar-nav ml-auto logout-btn'>
+      <li class='nav-item user-name'>
+        <%= fa_icon 'user' %> <%= current_user.full_name %> 
         <li class='nav-item'>
           <%= link_to "Logout", destroy_user_session_path,method: :delete, class:"btn btn-xs btn-danger" %>
         </li>
