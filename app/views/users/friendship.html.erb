@@ -1,10 +1,10 @@
 <h1>My Friends</h1>
 <div class="search-title">
 <h3>Search Friends</h3>
-<%= form_tag '#', remote: true, method: :get do %> <!-- remote will convert to ajax-->
+<%= form_tag search_friend_path, remote: true, method: :get do %> <!-- remote will convert to ajax-->
   <div class="form-group row no-right-padding">
     <div class="col-sm-9">
-      <%= text_field_tag :stock, params[:stock], placeholder: "Friend name", autofocus: true, class: "form-control form-control-lg" %>
+      <%= text_field_tag :friend, params[:friend], placeholder: "Friend name or email", autofocus: true, class: "form-control form-control-lg" %>
     </div>
 
     <div class="col-sm-3 no-left-padding">
@@ -14,7 +14,7 @@
     </div>
     <%end%>
 </div>
-<div id="results"> 
+<div id="friend_results"> 
 
 </div>
 

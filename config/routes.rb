@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get 'my_portfolio', to: 'users#my_portfolio'
   get 'friendship', to: 'users#friendship'
   get 'search_stock', to: 'stocks#search'
- 
+  get 'search_friend', to: 'users#search'
 
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
