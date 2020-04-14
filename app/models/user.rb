@@ -49,10 +49,17 @@ has_many :friends, through: :friendships
     User.where("#{field_name} like ?", "%#{param}%")
   end
 
-
-  ######EXCLUDING CURRENT USER########
+  ######Exclude current User ############
 
   def except_current_user(users)
     users.reject{ |user| user.id == self.id}
   end
+
+  ##########
+
+  def not_friends_with?(id_of_friend)
+    !self.friends.where(id: id_of_friend).exists?
+  end
+
+
 end
