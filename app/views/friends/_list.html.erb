@@ -14,7 +14,7 @@
   
     <% @friends.each do |friend| %>
       <tr>
-        <td><%= friend.first_name + " " + friend.last_name %> </th>
+        <td><%= friend.full_name %> </th>
         <td><%= friend.email %> </th>
         <td><%= link_to 'Stop Following', friendship_path(friend), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-sm btn-warning" %></td>
       </tr>
